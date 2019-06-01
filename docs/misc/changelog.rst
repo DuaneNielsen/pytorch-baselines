@@ -8,6 +8,8 @@ For download links, please look at `Github release page <https://github.com/hill
 Release 2.5.2a0 (WIP)
 --------------------
 
+- added specific hyperparameter for PPO2 to clip the value function (``cliprange_vf``)
+- fixed ``num_timesteps`` (total_timesteps) variable in PPO2 that was wrongly computed.
 - Bugfix for ``VecEnvWrapper.__getattr__`` which enables access to class attributes inherited from parent classes.
 - Removed ``get_available_gpus`` function which hadn't been used anywhere (@Pastafarianist)
 - Fixed path splitting in ``TensorboardWriter._get_latest_run_id()`` on Windows machines (@PatrickWalter214)
