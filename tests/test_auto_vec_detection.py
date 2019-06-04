@@ -1,9 +1,9 @@
 import pytest
 import numpy as np
 
-from stable_baselines import A2C, ACER, ACKTR, DDPG, DQN, PPO1, PPO2, SAC, TRPO
-from stable_baselines.common.vec_env import DummyVecEnv
-from stable_baselines.common.identity_env import IdentityEnv, IdentityEnvBox, IdentityEnvMultiBinary, \
+from pytorch_baselines import A2C, ACER, ACKTR, DDPG, DQN, PPO1, PPO2, SAC, TRPO
+from pytorch_baselines.common.vec_env import DummyVecEnv
+from pytorch_baselines.common.identity_env import IdentityEnv, IdentityEnvBox, IdentityEnvMultiBinary, \
     IdentityEnvMultiDiscrete
 
 

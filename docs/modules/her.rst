@@ -1,6 +1,6 @@
 .. _her:
 
-.. automodule:: stable_baselines.her
+.. automodule:: pytorch_baselines.her
 
 
 HER
@@ -22,7 +22,7 @@ Training an agent is very simple:
 
 .. code:: bash
 
-   python -m stable_baselines.her.experiment.train
+   python -m pytorch_baselines.her.experiment.train
 
 This will train a DDPG+HER agent on the ``FetchReach`` environment. You
 should see the success rate go up quickly to ``1.0``, which means that
@@ -35,7 +35,7 @@ To inspect what the agent has learned, use the play script:
 
 .. code:: bash
 
-   python -m stable_baselines.her.experiment.play /path/to/an/experiment/policy_best.pkl
+   python -m pytorch_baselines.her.experiment.play /path/to/an/experiment/policy_best.pkl
 
 You can try it right now with the results of the training step (the
 script prints out the path for you). This should visualize the current
@@ -49,7 +49,7 @@ the following command:
 
 .. code:: bash
 
-   python -m stable_baselines.her.experiment.train --num_cpu 19
+   python -m pytorch_baselines.her.experiment.train --num_cpu 19
 
 This will require a machine with sufficient amount of physical CPU
 cores. In our experiments, we used `Azure's D15v2 instances`_, which

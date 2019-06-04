@@ -4,13 +4,13 @@ import gym
 import numpy as np
 import pytest
 
-from stable_baselines import A2C, ACER, ACKTR, GAIL, DDPG, DQN, PPO1, PPO2, TRPO, SAC
-from stable_baselines.common.cmd_util import make_atari_env
-from stable_baselines.common.vec_env import VecFrameStack
-from stable_baselines.gail import ExpertDataset, generate_expert_traj
+from pytorch_baselines import A2C, ACER, ACKTR, GAIL, DDPG, DQN, PPO1, PPO2, TRPO, SAC
+from pytorch_baselines.common.cmd_util import make_atari_env
+from pytorch_baselines.common.vec_env import VecFrameStack
+from pytorch_baselines.gail import ExpertDataset, generate_expert_traj
 
-EXPERT_PATH_PENDULUM = "stable_baselines/gail/dataset/expert_pendulum.npz"
-EXPERT_PATH_DISCRETE = "stable_baselines/gail/dataset/expert_cartpole.npz"
+EXPERT_PATH_PENDULUM = "pytorch_baselines/gail/dataset/expert_pendulum.npz"
+EXPERT_PATH_DISCRETE = "pytorch_baselines/gail/dataset/expert_cartpole.npz"
 
 
 @pytest.mark.parametrize("expert_env", [('Pendulum-v0', EXPERT_PATH_PENDULUM, True),

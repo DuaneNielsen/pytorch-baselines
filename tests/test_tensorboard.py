@@ -3,7 +3,7 @@ import shutil
 
 import pytest
 
-from stable_baselines import A2C, ACER, ACKTR, DQN, DDPG, PPO1, PPO2, SAC, TRPO
+from pytorch_baselines import A2C, ACER, ACKTR, DQN, DDPG, PPO1, PPO2, SAC, TRPO
 
 TENSORBOARD_DIR = '/tmp/tb_dir/'
 

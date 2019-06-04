@@ -20,5 +20,5 @@ computes the entropy, the negative log probability (``neglogp``) and backpropaga
 In the case of continuous actions, a Gaussian distribution is used. The policy network outputs
 mean and (log) std of the distribution (assumed to be a ``DiagGaussianProbabilityDistribution``).
 
-.. automodule:: stable_baselines.common.distributions
+.. automodule:: pytorch_baselines.common.distributions
   :members:

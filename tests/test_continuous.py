@@ -5,18 +5,18 @@ import gym
 import pytest
 import numpy as np
 
-from stable_baselines import A2C, SAC
+from pytorch_baselines import A2C, SAC
 # TODO: add support for continuous actions
-# from stable_baselines.acer import ACER
-# from stable_baselines.acktr import ACKTR
-from stable_baselines.ddpg import DDPG
-from stable_baselines.ppo1 import PPO1
-from stable_baselines.ppo2 import PPO2
-from stable_baselines.trpo_mpi import TRPO
-from stable_baselines.common import set_global_seeds
-from stable_baselines.common.vec_env import DummyVecEnv
-from stable_baselines.common.identity_env import IdentityEnvBox
-from stable_baselines.ddpg import AdaptiveParamNoiseSpec, NormalActionNoise
+# from pytorch_baselines.acer import ACER
+# from pytorch_baselines.acktr import ACKTR
+from pytorch_baselines.ddpg import DDPG
+from pytorch_baselines.ppo1 import PPO1
+from pytorch_baselines.ppo2 import PPO2
+from pytorch_baselines.trpo_mpi import TRPO
+from pytorch_baselines.common import set_global_seeds
+from pytorch_baselines.common.vec_env import DummyVecEnv
+from pytorch_baselines.common.identity_env import IdentityEnvBox
+from pytorch_baselines.ddpg import AdaptiveParamNoiseSpec, NormalActionNoise
 from tests.test_common import _assert_eq
 
 
@@ -153,7 +153,7 @@ def test_model_manipulation(request, model_class):
 def test_ddpg():
     args = ['--env-id', 'Pendulum-v0', '--num-timesteps', 1000, '--noise-type', 'ou_0.01']
     args = list(map(str, args))
-    return_code = subprocess.call(['python', '-m', 'stable_baselines.ddpg.main'] + args)
+    return_code = subprocess.call(['python', '-m', 'pytorch_baselines.ddpg.main'] + args)
     _assert_eq(return_code, 0)
 
 

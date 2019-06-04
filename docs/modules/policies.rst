@@ -1,6 +1,6 @@
 .. _policies:
 
-.. automodule:: stable_baselines.common.policies
+.. automodule:: pytorch_baselines.common.policies
 
 Policy Networks
 ===============

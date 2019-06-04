@@ -1,6 +1,6 @@
 .. _dqn:
 
-.. automodule:: stable_baselines.deepq
+.. automodule:: pytorch_baselines.deepq
 
 
 DQN
@@ -11,7 +11,7 @@ and its extensions (Double-DQN, Dueling-DQN, Prioritized Experience Replay).
 
 .. warning::
 
-  The DQN model does not support ``stable_baselines.common.policies``,
+  The DQN model does not support ``pytorch_baselines.common.policies``,
   as a result it must use its own policy models (see :ref:`deepq_policies`).
 
 .. rubric:: Available Policies
@@ -55,9 +55,9 @@ Example
 
   import gym
 
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines.deepq.policies import MlpPolicy
-  from stable_baselines import DQN
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines.deepq.policies import MlpPolicy
+  from pytorch_baselines import DQN
 
   env = gym.make('CartPole-v1')
   env = DummyVecEnv([lambda: env])
@@ -81,9 +81,9 @@ With Atari:
 
 .. code-block:: python
 
-  from stable_baselines.common.atari_wrappers import make_atari
-  from stable_baselines.deepq.policies import MlpPolicy, CnnPolicy
-  from stable_baselines import DQN
+  from pytorch_baselines.common.atari_wrappers import make_atari
+  from pytorch_baselines.deepq.policies import MlpPolicy, CnnPolicy
+  from pytorch_baselines import DQN
 
   env = make_atari('BreakoutNoFrameskip-v4')
 
@@ -143,9 +143,9 @@ You can easily define a custom architecture for the policy network:
 
   import gym
 
-  from stable_baselines.deepq.policies import FeedForwardPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import DQN
+  from pytorch_baselines.deepq.policies import FeedForwardPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import DQN
 
   # Custom MLP policy of two layers of size 32 each
   class CustomPolicy(FeedForwardPolicy):

@@ -2,11 +2,11 @@
 branch = False
 omit =
     # Mujoco requires a licence
-    stable_baselines/*/run_mujoco.py
-    stable_baselines/ppo1/run_humanoid.py
-    stable_baselines/ppo1/run_robotics.py
+    pytorch_baselines/*/run_mujoco.py
+    pytorch_baselines/ppo1/run_humanoid.py
+    pytorch_baselines/ppo1/run_robotics.py
     # HER requires mpi and Mujoco
-    stable_baselines/her/experiment/*
+    pytorch_baselines/her/experiment/*
     tests/*
     setup.py
 

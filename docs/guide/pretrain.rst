@@ -1,6 +1,6 @@
 .. _pretrain:
 
-.. automodule:: stable_baselines.gail
+.. automodule:: pytorch_baselines.gail
 
 
 Pre-Training (Behavior Cloning)
@@ -44,8 +44,8 @@ to learn about the data structure of the expert dataset (see below for an overvi
 
 .. code-block:: python
 
-  from stable_baselines import DQN
-  from stable_baselines.gail import generate_expert_traj
+  from pytorch_baselines import DQN
+  from pytorch_baselines.gail import generate_expert_traj
 
   model = DQN('MlpPolicy', 'CartPole-v1', verbose=1)
 	# Train a DQN agent for 1e5 timesteps and generate 10 trajectories
@@ -63,7 +63,7 @@ The idea is that this callable can be a PID controller, asking a human player, .
 
 		import gym
 
-		from stable_baselines.gail import generate_expert_traj
+		from pytorch_baselines.gail import generate_expert_traj
 
 		env = gym.make("CartPole-v1")
 		# Here the expert is a random agent
@@ -91,8 +91,8 @@ Using the ``expert_cartpole.npz`` dataset generated with the previous script.
 
 .. code-block:: python
 
-	from stable_baselines import PPO2
-	from stable_baselines.gail import ExpertDataset
+	from pytorch_baselines import PPO2
+	from pytorch_baselines.gail import ExpertDataset
 	# Using only one expert trajectory
 	# you can specify `traj_limitation=-1` for using the whole dataset
 	dataset = ExpertDataset(expert_path='expert_cartpole.npz',

@@ -52,7 +52,7 @@ Roboschool simulations training on Amazon SageMaker
 
 
 | Author: Amazon AWS
-| `Repo Link <https://github.com/awslabs/amazon-sagemaker-examples/tree/master/reinforcement_learning/rl_roboschool_stable_baselines>`_
+| `Repo Link <https://github.com/awslabs/amazon-sagemaker-examples/tree/master/reinforcement_learning/rl_roboschool_pytorch_baselines>`_
 
 
 MarathonEnvs + OpenAi.Baselines
@@ -100,4 +100,4 @@ The Proximal Policy Optimization (PPO) algorithm is applied.
 | Author: Ronja Güldenring
 | Email: 6guelden@informatik.uni-hamburg.de
 | Video: https://www.youtube.com/watch?v=laGrLaMaeT4
-| GitHub: https://github.com/RGring/drl_local_planner_ros_stable_baselines
+| GitHub: https://github.com/RGring/drl_local_planner_ros_pytorch_baselines

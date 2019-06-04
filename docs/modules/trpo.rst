@@ -1,6 +1,6 @@
 .. _trpo:
 
-.. automodule:: stable_baselines.trpo_mpi
+.. automodule:: pytorch_baselines.trpo_mpi
 
 
 TRPO
@@ -14,9 +14,9 @@ Notes
 
 -  Original paper:  https://arxiv.org/abs/1502.05477
 -  OpenAI blog post: https://blog.openai.com/openai-baselines-ppo/
-- ``mpirun -np 16 python -m stable_baselines.trpo_mpi.run_atari`` runs the algorithm
+- ``mpirun -np 16 python -m pytorch_baselines.trpo_mpi.run_atari`` runs the algorithm
   for 40M frames = 10M timesteps on an Atari game. See help (``-h``) for more options.
-- ``python -m stable_baselines.trpo_mpi.run_mujoco`` runs the algorithm for 1M timesteps on a Mujoco environment.
+- ``python -m pytorch_baselines.trpo_mpi.run_mujoco`` runs the algorithm for 1M timesteps on a Mujoco environment.
 
 Can I use?
 ----------
@@ -43,9 +43,9 @@ Example
 
   import gym
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import TRPO
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import TRPO
 
   env = gym.make('CartPole-v1')
   env = DummyVecEnv([lambda: env])

@@ -4,10 +4,10 @@ from io import BytesIO
 import pytest
 import numpy as np
 
-from stable_baselines import A2C, ACER, ACKTR, DQN, PPO1, PPO2, TRPO
-from stable_baselines.common import set_global_seeds
-from stable_baselines.common.identity_env import IdentityEnv
-from stable_baselines.common.vec_env import DummyVecEnv
+from pytorch_baselines import A2C, ACER, ACKTR, DQN, PPO1, PPO2, TRPO
+from pytorch_baselines.common import set_global_seeds
+from pytorch_baselines.common.identity_env import IdentityEnv
+from pytorch_baselines.common.vec_env import DummyVecEnv
 
 N_TRIALS = 2000
 

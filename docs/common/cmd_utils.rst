@@ -3,5 +3,5 @@
 Command Utils
 =========================
 
-.. automodule:: stable_baselines.common.cmd_util
+.. automodule:: pytorch_baselines.common.cmd_util
   :members:

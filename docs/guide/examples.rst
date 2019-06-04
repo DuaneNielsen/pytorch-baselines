@@ -53,9 +53,9 @@ In the following example, we will train, save and load an A2C model on the Lunar
 
   import gym
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import A2C
 
   # Create and wrap the environment
   env = gym.make('LunarLander-v2')
@@ -98,10 +98,10 @@ Multiprocessing: Unleashing the Power of Vectorized Environments
   import gym
   import numpy as np
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines.common.vec_env import SubprocVecEnv
-  from stable_baselines.common import set_global_seeds
-  from stable_baselines import ACKTR
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import SubprocVecEnv
+  from pytorch_baselines.common import set_global_seeds
+  from pytorch_baselines import ACKTR
 
   def make_env(env_id, rank, seed=0):
       """
@@ -159,12 +159,12 @@ If your callback returns False, training is aborted early.
   import numpy as np
   import matplotlib.pyplot as plt
 
-  from stable_baselines.ddpg.policies import MlpPolicy
-  from stable_baselines.common.vec_env.dummy_vec_env import DummyVecEnv
-  from stable_baselines.bench import Monitor
-  from stable_baselines.results_plotter import load_results, ts2xy
-  from stable_baselines import DDPG
-  from stable_baselines.ddpg.noise import AdaptiveParamNoiseSpec
+  from pytorch_baselines.ddpg.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env.dummy_vec_env import DummyVecEnv
+  from pytorch_baselines.bench import Monitor
+  from pytorch_baselines.results_plotter import load_results, ts2xy
+  from pytorch_baselines import DDPG
+  from pytorch_baselines.ddpg.noise import AdaptiveParamNoiseSpec
 
 
   best_mean_reward, n_steps = -np.inf, 0
@@ -233,9 +233,9 @@ and multiprocessing for you.
 
 .. code-block:: python
 
-  from stable_baselines.common.cmd_util import make_atari_env
-  from stable_baselines.common.vec_env import VecFrameStack
-  from stable_baselines import ACER
+  from pytorch_baselines.common.cmd_util import make_atari_env
+  from pytorch_baselines.common.vec_env import VecFrameStack
+  from pytorch_baselines import ACER
 
   # There already exists an environment generator
   # that will make and wrap atari environments correctly.
@@ -271,9 +271,9 @@ will compute a running average and standard deviation of input features (it can 
 
   import gym
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv, VecNormalize
-  from stable_baselines import PPO2
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv, VecNormalize
+  from pytorch_baselines import PPO2
 
   env = DummyVecEnv([lambda: gym.make("Reacher-v2")])
   # Automatically normalize the input features
@@ -300,9 +300,9 @@ However, you can also easily define a custom architecture for the policy network
 
   import gym
 
-  from stable_baselines.common.policies import FeedForwardPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import FeedForwardPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import A2C
 
   # Custom MLP policy of three layers of size 128 each
   class CustomPolicy(FeedForwardPolicy):
@@ -337,9 +337,9 @@ A2C policy gradient updates on the model.
   import gym
   import numpy as np
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import A2C
 
   def mutate(params):
       """Mutate parameters by adding normal noise to them"""
@@ -413,7 +413,7 @@ This example demonstrate how to train a recurrent policy and how to test it prop
 
 .. code-block:: python
 
-  from stable_baselines import PPO2
+  from pytorch_baselines import PPO2
 
   # For recurrent policies, with PPO2, the number of environments run in parallel
   # should be a multiple of nminibatches.
@@ -449,8 +449,8 @@ You can also move from learning on one environment to another for `continual lea
 
 .. code-block:: python
 
-  from stable_baselines.common.cmd_util import make_atari_env
-  from stable_baselines import PPO2
+  from pytorch_baselines.common.cmd_util import make_atari_env
+  from pytorch_baselines import PPO2
 
   # There already exists an environment generator
   # that will make and wrap atari environments correctly
@@ -491,7 +491,7 @@ Record a mp4 video (here using a random agent).
 .. code-block:: python
 
   import gym
-  from stable_baselines.common.vec_env import VecVideoRecorder, DummyVecEnv
+  from pytorch_baselines.common.vec_env import VecVideoRecorder, DummyVecEnv
 
   env_id = 'CartPole-v1'
   video_folder = 'logs/videos/'
@@ -525,8 +525,8 @@ Bonus: Make a GIF of a Trained Agent
   import imageio
   import numpy as np
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines import A2C
 
   model = A2C(MlpPolicy, "LunarLander-v2").learn(100000)
 

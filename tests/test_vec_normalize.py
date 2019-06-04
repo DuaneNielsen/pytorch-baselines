@@ -3,9 +3,9 @@ import subprocess
 import gym
 import numpy as np
 
-from stable_baselines.common.running_mean_std import RunningMeanStd
-from stable_baselines.common.vec_env.dummy_vec_env import DummyVecEnv
-from stable_baselines.common.vec_env.vec_normalize import VecNormalize
+from pytorch_baselines.common.running_mean_std import RunningMeanStd
+from pytorch_baselines.common.vec_env.dummy_vec_env import DummyVecEnv
+from pytorch_baselines.common.vec_env.vec_normalize import VecNormalize
 from .test_common import _assert_eq
 
 ENV_ID = 'Pendulum-v0'
@@ -47,7 +47,7 @@ def test_vec_env():
 def test_mpi_runningmeanstd():
     """Test RunningMeanStd object for MPI"""
     return_code = subprocess.call(['mpirun', '--allow-run-as-root', '-np', '2',
-                                   'python', '-m', 'stable_baselines.common.mpi_running_mean_std'])
+                                   'python', '-m', 'pytorch_baselines.common.mpi_running_mean_std'])
     _assert_eq(return_code, 0)
 
 
@@ -56,5 +56,5 @@ def test_mpi_moments():
     test running mean std function
     """
     subprocess.check_call(['mpirun', '--allow-run-as-root', '-np', '3', 'python', '-c',
-                           'from stable_baselines.common.mpi_moments '
+                           'from pytorch_baselines.common.mpi_moments '
                            'import _helper_runningmeanstd; _helper_runningmeanstd()'])

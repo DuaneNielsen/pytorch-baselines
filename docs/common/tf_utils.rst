@@ -3,5 +3,5 @@
 Tensorflow Utils
 =========================
 
-.. automodule:: stable_baselines.common.tf_util
+.. automodule:: pytorch_baselines.common.tf_util
   :members:

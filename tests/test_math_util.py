@@ -1,6 +1,6 @@
 import numpy as np
 
-from stable_baselines.common.math_util import discount_with_boundaries
+from pytorch_baselines.common.math_util import discount_with_boundaries
 
 
 def test_discount_with_boundaries():

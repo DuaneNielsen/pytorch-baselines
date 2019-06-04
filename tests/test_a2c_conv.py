@@ -1,8 +1,8 @@
 import tensorflow as tf
 import numpy as np
-from stable_baselines.a2c.utils import conv
+from pytorch_baselines.a2c.utils import conv
 import gym
-from stable_baselines.common.input import observation_input
+from pytorch_baselines.common.input import observation_input
 
 ENV_ID = 'BreakoutNoFrameskip-v4'
 SEED = 3

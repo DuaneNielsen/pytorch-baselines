@@ -52,7 +52,7 @@ import warnings
 
 import numpy as np
 
-from stable_baselines import PPO2
+from pytorch_baselines import PPO2
 ```
 
 In general, we recommend using pycharm to format everything in an efficient way.

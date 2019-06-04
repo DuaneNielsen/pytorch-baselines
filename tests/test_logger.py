@@ -1,6 +1,6 @@
 import pytest
 
-from stable_baselines.logger import make_output_format, read_tb, read_csv, read_json, _demo
+from pytorch_baselines.logger import make_output_format, read_tb, read_csv, read_json, _demo
 
 
 KEY_VALUES = {'test': 1, 'b': -3.14, '8': 9.9}
@@ -9,7 +9,7 @@ LOG_DIR = '/tmp/openai_baselines/'
 
 def test_main():
     """
-    Dry-run python -m stable_baselines.logger
+    Dry-run python -m pytorch_baselines.logger
     """
     _demo()
 

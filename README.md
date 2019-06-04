@@ -99,9 +99,9 @@ Here is a quick example of how to train and run PPO2 on a cartpole environment:
 ```python
 import gym
 
-from stable_baselines.common.policies import MlpPolicy
-from stable_baselines.common.vec_env import DummyVecEnv
-from stable_baselines import PPO2
+from pytorch_baselines.common.policies import MlpPolicy
+from pytorch_baselines.common.vec_env import DummyVecEnv
+from pytorch_baselines import PPO2
 
 env = gym.make('CartPole-v1')
 env = DummyVecEnv([lambda: env])  # The algorithms require a vectorized environment to run
@@ -121,7 +121,7 @@ env.close()
 Or just train a model with a one liner if [the environment is registered in Gym](https://github.com/openai/gym/wiki/Environments) and if [the policy is registered](https://stable-baselines.readthedocs.io/en/master/guide/custom_policy.html):
 
 ```python
-from stable_baselines import PPO2
+from pytorch_baselines import PPO2
 
 model = PPO2('MlpPolicy', 'CartPole-v1').learn(10000)
 ```

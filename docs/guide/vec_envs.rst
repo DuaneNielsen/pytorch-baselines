@@ -1,6 +1,6 @@
 .. _vec_env:
 
-.. automodule:: stable_baselines.common.vec_env
+.. automodule:: pytorch_baselines.common.vec_env
 
 Vectorized Environments
 =======================

@@ -1,6 +1,6 @@
 .. _a2c:
 
-.. automodule:: stable_baselines.a2c
+.. automodule:: pytorch_baselines.a2c
 
 
 A2C
@@ -15,10 +15,10 @@ Notes
 
 -  Original paper:  https://arxiv.org/abs/1602.01783
 -  OpenAI blog post: https://openai.com/blog/baselines-acktr-a2c/
--  ``python -m stable_baselines.a2c.run_atari`` runs the algorithm for 40M
+-  ``python -m pytorch_baselines.a2c.run_atari`` runs the algorithm for 40M
    frames = 10M timesteps on an Atari game. See help (``-h``) for more
    options.
--  ``python -m stable_baselines.a2c.run_mujoco`` runs the algorithm for 1M
+-  ``python -m pytorch_baselines.a2c.run_mujoco`` runs the algorithm for 1M
    frames on a Mujoco environment.
 
 Can I use?
@@ -48,9 +48,9 @@ Train a A2C agent on `CartPole-v1` using 4 processes.
 
   import gym
 
-  from stable_baselines.common.policies import MlpPolicy
-  from stable_baselines.common.vec_env import SubprocVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import SubprocVecEnv
+  from pytorch_baselines import A2C
 
   # multiprocess environment
   n_cpu = 4

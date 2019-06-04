@@ -6,11 +6,11 @@ from gym import spaces
 import numpy as np
 import pytest
 
-from stable_baselines import A2C, ACER, ACKTR, PPO2, bench
-from stable_baselines.common.policies import MlpLstmPolicy, LstmPolicy
-from stable_baselines.common.vec_env import SubprocVecEnv
-from stable_baselines.common.vec_env.vec_normalize import VecNormalize
-from stable_baselines.ppo2.ppo2 import safe_mean
+from pytorch_baselines import A2C, ACER, ACKTR, PPO2, bench
+from pytorch_baselines.common.policies import MlpLstmPolicy, LstmPolicy
+from pytorch_baselines.common.vec_env import SubprocVecEnv
+from pytorch_baselines.common.vec_env.vec_normalize import VecNormalize
+from pytorch_baselines.ppo2.ppo2 import safe_mean
 
 
 class CustomLSTMPolicy1(LstmPolicy):

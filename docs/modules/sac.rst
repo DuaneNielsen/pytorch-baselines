@@ -1,6 +1,6 @@
 .. _sac:
 
-.. automodule:: stable_baselines.sac
+.. automodule:: pytorch_baselines.sac
 
 
 SAC
@@ -9,7 +9,7 @@ SAC
 
 .. warning::
 
-  The SAC model does not support ``stable_baselines.common.policies`` because it uses double q-values
+  The SAC model does not support ``pytorch_baselines.common.policies`` because it uses double q-values
   and value estimation, as a result it must use its own policy models (see :ref:`sac_policies`).
 
 
@@ -69,9 +69,9 @@ Example
   import gym
   import numpy as np
 
-  from stable_baselines.sac.policies import MlpPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import SAC
+  from pytorch_baselines.sac.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import SAC
 
   env = gym.make('Pendulum-v0')
   env = DummyVecEnv([lambda: env])
@@ -132,9 +132,9 @@ You can easily define a custom architecture for the policy network:
 
   import gym
 
-  from stable_baselines.sac.policies import FeedForwardPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import SAC
+  from pytorch_baselines.sac.policies import FeedForwardPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import SAC
 
   # Custom MLP policy of three layers of size 128 each
   class CustomSACPolicy(FeedForwardPolicy):

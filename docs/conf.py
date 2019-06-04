@@ -36,7 +36,7 @@ MOCK_MODULES = ['joblib', 'scipy', 'scipy.signal',
                 'gym.wrappers', 'gym.wrappers.monitoring', 'zmq']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
-import stable_baselines
+import pytorch_baselines
 
 
 # -- Project information -----------------------------------------------------
@@ -46,9 +46,9 @@ copyright = '2018-2019, Stable Baselines'
 author = 'Stable Baselines Contributors'
 
 # The short X.Y version
-version = 'master (' + stable_baselines.__version__ + ' )'
+version = 'master (' + pytorch_baselines.__version__ + ' )'
 # The full version, including alpha/beta/rc tags
-release = stable_baselines.__version__
+release = pytorch_baselines.__version__
 
 
 # -- General configuration ---------------------------------------------------

@@ -1,15 +1,15 @@
 import pytest
 
-from stable_baselines import bench, logger
-from stable_baselines.deepq import DQN, wrap_atari_dqn, CnnPolicy
-from stable_baselines.common import set_global_seeds
-from stable_baselines.common.atari_wrappers import make_atari
-import stable_baselines.a2c.run_atari as a2c_atari
-import stable_baselines.acer.run_atari as acer_atari
-import stable_baselines.acktr.run_atari as acktr_atari
-import stable_baselines.ppo1.run_atari as ppo1_atari
-import stable_baselines.ppo2.run_atari as ppo2_atari
-import stable_baselines.trpo_mpi.run_atari as trpo_atari
+from pytorch_baselines import bench, logger
+from pytorch_baselines.deepq import DQN, wrap_atari_dqn, CnnPolicy
+from pytorch_baselines.common import set_global_seeds
+from pytorch_baselines.common.atari_wrappers import make_atari
+import pytorch_baselines.a2c.run_atari as a2c_atari
+import pytorch_baselines.acer.run_atari as acer_atari
+import pytorch_baselines.acktr.run_atari as acktr_atari
+import pytorch_baselines.ppo1.run_atari as ppo1_atari
+import pytorch_baselines.ppo2.run_atari as ppo2_atari
+import pytorch_baselines.trpo_mpi.run_atari as trpo_atari
 
 
 ENV_ID = 'BreakoutNoFrameskip-v4'

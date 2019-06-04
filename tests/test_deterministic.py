@@ -1,9 +1,9 @@
 import pytest
 
-from stable_baselines import A2C, ACER, ACKTR, DQN, DDPG, PPO1, PPO2, SAC, TRPO
-from stable_baselines.ddpg import AdaptiveParamNoiseSpec
-from stable_baselines.common.identity_env import IdentityEnv, IdentityEnvBox
-from stable_baselines.common.vec_env import DummyVecEnv
+from pytorch_baselines import A2C, ACER, ACKTR, DQN, DDPG, PPO1, PPO2, SAC, TRPO
+from pytorch_baselines.ddpg import AdaptiveParamNoiseSpec
+from pytorch_baselines.common.identity_env import IdentityEnv, IdentityEnvBox
+from pytorch_baselines.common.vec_env import DummyVecEnv
 
 PARAM_NOISE_DDPG = AdaptiveParamNoiseSpec(initial_stddev=float(0.2), desired_action_stddev=float(0.2))
 

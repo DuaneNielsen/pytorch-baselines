@@ -1,6 +1,6 @@
 import numpy as np
 
-from stable_baselines.common.running_stat import RunningStat
+from pytorch_baselines.common.running_stat import RunningStat
 
 
 def test_running_stat():

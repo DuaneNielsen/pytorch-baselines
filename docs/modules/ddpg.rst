@@ -1,6 +1,6 @@
 .. _ddpg:
 
-.. automodule:: stable_baselines.ddpg
+.. automodule:: pytorch_baselines.ddpg
 
 
 DDPG
@@ -10,7 +10,7 @@ DDPG
 
 .. warning::
 
-  The DDPG model does not support ``stable_baselines.common.policies`` because it uses q-value instead
+  The DDPG model does not support ``pytorch_baselines.common.policies`` because it uses q-value instead
   of value estimation, as a result it must use its own policy models (see :ref:`ddpg_policies`).
 
 
@@ -29,7 +29,7 @@ Notes
 
 - Original paper: https://arxiv.org/abs/1509.02971
 - Baselines post: https://blog.openai.com/better-exploration-with-parameter-noise/
-- ``python -m stable_baselines.ddpg.main`` runs the algorithm for 1M frames = 10M timesteps
+- ``python -m pytorch_baselines.ddpg.main`` runs the algorithm for 1M frames = 10M timesteps
   on a Mujoco environment. See help (``-h``) for more options.
 
 Can I use?
@@ -58,10 +58,10 @@ Example
   import gym
   import numpy as np
 
-  from stable_baselines.ddpg.policies import MlpPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines.ddpg.noise import NormalActionNoise, OrnsteinUhlenbeckActionNoise, AdaptiveParamNoiseSpec
-  from stable_baselines import DDPG
+  from pytorch_baselines.ddpg.policies import MlpPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines.ddpg.noise import NormalActionNoise, OrnsteinUhlenbeckActionNoise, AdaptiveParamNoiseSpec
+  from pytorch_baselines import DDPG
 
   env = gym.make('MountainCarContinuous-v0')
   env = DummyVecEnv([lambda: env])
@@ -143,9 +143,9 @@ You can easily define a custom architecture for the policy network:
 
   import gym
 
-  from stable_baselines.ddpg.policies import FeedForwardPolicy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import DDPG
+  from pytorch_baselines.ddpg.policies import FeedForwardPolicy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import DDPG
 
   # Custom MLP policy of two layers of size 16 each
   class CustomPolicy(FeedForwardPolicy):

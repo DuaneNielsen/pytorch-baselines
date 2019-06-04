@@ -1,6 +1,6 @@
 .. _gail:
 
-.. automodule:: stable_baselines.gail
+.. automodule:: pytorch_baselines.gail
 
 
 GAIL
@@ -36,15 +36,15 @@ You can either train a RL algorithm in a classic setting, use another controller
 or human demonstrations.
 
 We recommend you to take a look at :ref:`pre-training <pretrain>` section
-or directly look at ``stable_baselines/gail/dataset/`` folder to learn more about the expected format for the dataset.
+or directly look at ``pytorch_baselines/gail/dataset/`` folder to learn more about the expected format for the dataset.
 
 Here is an example of training a Soft Actor-Critic model to generate expert trajectories for GAIL:
 
 
 .. code-block:: python
 
-  from stable_baselines import SAC
-  from stable_baselines.gail import generate_expert_traj
+  from pytorch_baselines import SAC
+  from pytorch_baselines.gail import generate_expert_traj
 
   # Generate expert trajectories (train expert)
   model = SAC('MlpPolicy', 'Pendulum-v0', verbose=1)
@@ -96,8 +96,8 @@ Example
 
   import gym
 
-  from stable_baselines import GAIL, SAC
-  from stable_baselines.gail import ExpertDataset, generate_expert_traj
+  from pytorch_baselines import GAIL, SAC
+  from pytorch_baselines.gail import ExpertDataset, generate_expert_traj
 
   # Generate expert trajectories (train expert)
   model = SAC('MlpPolicy', 'Pendulum-v0', verbose=1)

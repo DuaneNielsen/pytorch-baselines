@@ -1,6 +1,6 @@
 .. _acktr:
 
-.. automodule:: stable_baselines.acktr
+.. automodule:: pytorch_baselines.acktr
 
 
 ACKTR
@@ -15,7 +15,7 @@ Notes
 
 - Original paper: https://arxiv.org/abs/1708.05144
 - Baselines blog post: https://blog.openai.com/baselines-acktr-a2c/
-- ``python -m stable_baselines.acktr.run_atari`` runs the algorithm for 40M frames = 10M timesteps on an Atari game.
+- ``python -m pytorch_baselines.acktr.run_atari`` runs the algorithm for 40M frames = 10M timesteps on an Atari game.
   See help (``-h``) for more options.
 
 Can I use?
@@ -43,9 +43,9 @@ Example
 
   import gym
 
-  from stable_baselines.common.policies import MlpPolicy, MlpLstmPolicy, MlpLnLstmPolicy
-  from stable_baselines.common.vec_env import SubprocVecEnv
-  from stable_baselines import ACKTR
+  from pytorch_baselines.common.policies import MlpPolicy, MlpLstmPolicy, MlpLnLstmPolicy
+  from pytorch_baselines.common.vec_env import SubprocVecEnv
+  from pytorch_baselines import ACKTR
 
   # multiprocess environment
   n_cpu = 4

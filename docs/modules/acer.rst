@@ -1,6 +1,6 @@
 .. _acer:
 
-.. automodule:: stable_baselines.acer
+.. automodule:: pytorch_baselines.acer
 
 
 ACER
@@ -15,7 +15,7 @@ Notes
 -----
 
 - Original paper: https://arxiv.org/abs/1611.01224
-- ``python -m stable_baselines.acer.run_atari`` runs the algorithm for 40M frames = 10M timesteps on an Atari game. See help (``-h``) for more options.
+- ``python -m pytorch_baselines.acer.run_atari`` runs the algorithm for 40M frames = 10M timesteps on an Atari game. See help (``-h``) for more options.
 
 Can I use?
 ----------
@@ -42,9 +42,9 @@ Example
 
   import gym
 
-  from stable_baselines.common.policies import MlpPolicy, MlpLstmPolicy, MlpLnLstmPolicy
-  from stable_baselines.common.vec_env import SubprocVecEnv
-  from stable_baselines import ACER
+  from pytorch_baselines.common.policies import MlpPolicy, MlpLstmPolicy, MlpLnLstmPolicy
+  from pytorch_baselines.common.vec_env import SubprocVecEnv
+  from pytorch_baselines import ACER
 
   # multiprocess environment
   n_cpu = 4

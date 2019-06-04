@@ -14,7 +14,7 @@ using ``policy_kwargs`` parameter:
   import gym
   import tensorflow as tf
 
-  from stable_baselines import PPO2
+  from pytorch_baselines import PPO2
 
   # Custom MLP policy of two layers of size 32 each with tanh activation function
   policy_kwargs = dict(act_fun=tf.nn.tanh, net_arch=[32, 32])
@@ -46,9 +46,9 @@ You can also easily define a custom architecture for the policy (or value) netwo
 
   import gym
 
-  from stable_baselines.common.policies import FeedForwardPolicy, register_policy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import FeedForwardPolicy, register_policy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import A2C
 
   # Custom MLP policy of three layers of size 128 each
   class CustomPolicy(FeedForwardPolicy):
@@ -85,9 +85,9 @@ You can also register your policy, to help with code simplicity: you can refer t
 
   import gym
 
-  from stable_baselines.common.policies import FeedForwardPolicy, register_policy
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import FeedForwardPolicy, register_policy
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import A2C
 
   # Custom MLP policy of three layers of size 128 each
   class CustomPolicy(FeedForwardPolicy):
@@ -189,9 +189,9 @@ If your task requires even more granular control over the policy architecture, y
   import gym
   import tensorflow as tf
 
-  from stable_baselines.common.policies import ActorCriticPolicy, register_policy, nature_cnn
-  from stable_baselines.common.vec_env import DummyVecEnv
-  from stable_baselines import A2C
+  from pytorch_baselines.common.policies import ActorCriticPolicy, register_policy, nature_cnn
+  from pytorch_baselines.common.vec_env import DummyVecEnv
+  from pytorch_baselines import A2C
 
   # Custom MLP policy of three layers of size 128 each for the actor and 2 layers of 32 for the critic,
   # with a nature_cnn feature extractor

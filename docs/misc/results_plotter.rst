@@ -4,5 +4,5 @@
 Plotting Results
 ================
 
-.. automodule:: stable_baselines.results_plotter
+.. automodule:: pytorch_baselines.results_plotter
   :members:

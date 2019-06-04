@@ -4,12 +4,12 @@ import gym
 import pytest
 import tensorflow as tf
 
-from stable_baselines import A2C, ACER, ACKTR, DQN, PPO1, PPO2, TRPO, SAC, DDPG
-from stable_baselines.common.policies import FeedForwardPolicy
-from stable_baselines.common.vec_env import DummyVecEnv
-from stable_baselines.deepq.policies import FeedForwardPolicy as DQNPolicy
-from stable_baselines.ddpg.policies import FeedForwardPolicy as DDPGPolicy
-from stable_baselines.sac.policies import FeedForwardPolicy as SACPolicy
+from pytorch_baselines import A2C, ACER, ACKTR, DQN, PPO1, PPO2, TRPO, SAC, DDPG
+from pytorch_baselines.common.policies import FeedForwardPolicy
+from pytorch_baselines.common.vec_env import DummyVecEnv
+from pytorch_baselines.deepq.policies import FeedForwardPolicy as DQNPolicy
+from pytorch_baselines.ddpg.policies import FeedForwardPolicy as DDPGPolicy
+from pytorch_baselines.sac.policies import FeedForwardPolicy as SACPolicy
 
 N_TRIALS = 100
 

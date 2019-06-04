@@ -1,6 +1,6 @@
 .. _ppo2:
 
-.. automodule:: stable_baselines.ppo2
+.. automodule:: pytorch_baselines.ppo2
 
 PPO2
 ====
@@ -28,10 +28,10 @@ Notes
 - Original paper: https://arxiv.org/abs/1707.06347
 - Clear explanation of PPO on Arxiv Insights channel: https://www.youtube.com/watch?v=5P7I-xPq8u8
 - OpenAI blog post: https://blog.openai.com/openai-baselines-ppo/
-- ``python -m stable_baselines.ppo2.run_atari`` runs the algorithm for 40M
+- ``python -m pytorch_baselines.ppo2.run_atari`` runs the algorithm for 40M
    frames = 10M timesteps on an Atari game. See help (``-h``) for more
    options.
-- ``python -m stable_baselines.ppo2.run_mujoco`` runs the algorithm for 1M
+- ``python -m pytorch_baselines.ppo2.run_mujoco`` runs the algorithm for 1M
    frames on a Mujoco environment.
 
 Can I use?
@@ -60,9 +60,9 @@ Train a PPO agent on `CartPole-v1` using 4 processes.
 
    import gym
 
-   from stable_baselines.common.policies import MlpPolicy
-   from stable_baselines.common.vec_env import SubprocVecEnv
-   from stable_baselines import PPO2
+   from pytorch_baselines.common.policies import MlpPolicy
+   from pytorch_baselines.common.vec_env import SubprocVecEnv
+   from pytorch_baselines import PPO2
 
    # multiprocess environment
    n_cpu = 4

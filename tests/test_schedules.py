@@ -1,6 +1,6 @@
 import numpy as np
 
-from stable_baselines.common.schedules import ConstantSchedule, PiecewiseSchedule
+from pytorch_baselines.common.schedules import ConstantSchedule, PiecewiseSchedule
 
 
 def test_piecewise_schedule():

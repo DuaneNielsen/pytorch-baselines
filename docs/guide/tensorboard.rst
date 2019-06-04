@@ -12,7 +12,7 @@ To use Tensorboard with the rl baselines, you simply need to define a log locati
 
     import gym
 
-    from stable_baselines import A2C
+    from pytorch_baselines import A2C
 
     model = A2C('MlpPolicy', 'CartPole-v1', verbose=1, tensorboard_log="./a2c_cartpole_tensorboard/")
     model.learn(total_timesteps=10000)
@@ -24,8 +24,8 @@ Or after loading an existing model (by default the log path is not saved):
 
     import gym
 
-    from stable_baselines.common.vec_env import DummyVecEnv
-    from stable_baselines import A2C
+    from pytorch_baselines.common.vec_env import DummyVecEnv
+    from pytorch_baselines import A2C
 
     env = gym.make('CartPole-v1')
     env = DummyVecEnv([lambda: env])  # The algorithms require a vectorized environment to run
@@ -40,7 +40,7 @@ You can also define custom logging name when training (by default it is the algo
 
     import gym
 
-    from stable_baselines import A2C
+    from pytorch_baselines import A2C
 
     model = A2C('MlpPolicy', 'CartPole-v1', verbose=1, tensorboard_log="./a2c_cartpole_tensorboard/")
     model.learn(total_timesteps=10000, tb_log_name="first_run")
@@ -93,7 +93,7 @@ and to configure the logger using:
 
 .. code-block:: python
 
-  from stable_baselines.logger import configure
+  from pytorch_baselines.logger import configure
 
   configure()
 
