@@ -1,0 +1,18 @@
+Get rid of TensorFlow:
+    1. base_class.py
+    2. distributions.py
+    3. input.py
+    4. misc_util.py
+    5. tf_util.py -> pytorch_util.py
+    5. policies.py -> align with rlkit/softlearng/v
+
+
+Pytorch DataHandle:
+    1. input.py
+    2. 
+
+Distributed training:
+    1. mpi_adam.py
+    2. mpi_fork.py
+    3. mpi_moments.py
+    4. mpi_running_mean_std.py
